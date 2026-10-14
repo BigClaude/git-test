@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Recipe & Feedback Form</title>
+    <style>
+        /* CSS Reset & General Base Styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+            color: #333;
+            padding: 20px;
+        }
+
+        /* Main Container Layout */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Card Styling for Content Sections */
+        .card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        h1, h2, h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .recipe-meta {
+            color: #7f8c8d;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        /* Recipe Lists Styling */
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Form Controls Styling */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #34495e;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+
+        /* Button Styling */
+        button[type="submit"] {
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.2s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- HEADER SECTION -->
+        <h1>Delicious Beginner Recipes</h1>
+
+        <!-- RECIPE SECTION -->
+        <div class="card">
+            <h2>Classic Garlic Butter Pasta</h2>
+            <div class="recipe-meta">
+                <span>⏱️ Prep Time: 5 mins</span> | 
+                <span>🔥 Cook Time: 10 mins</span> | 
+                <span>🍽️ Servings: 2</span>
+            </div>
+
+            <h3>Ingredients</h3>
+            <ul>
+                <li>200g Spaghetti or any pasta of choice</li>
+                <li>3 tablespoons Unsalted butter</li>
+                <li>3 cloves Garlic, finely minced</li>
+                <li>1/4 cup Freshly grated Parmesan cheese</li>
+                <li>Salt and freshly ground black pepper to taste</li>
+                <li>Fresh parsley (optional, chopped for garnish)</li>
+            </ul>
+
+            <h3>Instructions</h3>
+            <ol>
+                <li>Bring a large pot of salted water to a boil. Add the pasta and cook according to the package directions until al dente.</li>
+                <li>Reserve 1/2 cup of pasta water, then drain the remaining pasta and set it aside.</li>
+                <li>In a large skillet over medium heat, melt the butter. Add the minced garlic and sauté for about 1 minute until fragrant (be careful not to burn it).</li>
+                <li>Add the cooked pasta and 2–3 tablespoons of the reserved pasta water into the skillet with the garlic butter. Toss continuously to coat the pasta.</li>
+                <li>Remove from heat, stir in the grated Parmesan cheese, and season with salt and pepper to taste.</li>
+                <li>Garnish with fresh parsley if desired, and serve warm!</li>
+            </ol>
+        </div>
+
+        <!-- FORM SECTION -->
+        <div class="card">
+            <h2>Recipe Feedback & Contact Form</h2>
+            <form action="#" method="POST">
+                
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="e.g. name@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">How did your recipe turn out?</label>
+                    <select id="experience" name="experience">
+                        <option value="delicious">Delicious!</option>
+                        <option value="good">Good, but needed more spice</option>
+                        <option value="average">Average</option>
+                        <option value="needs-work">Needs Improvement</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="comments">Additional Notes or Suggestions</label>
+                    <textarea id="comments" name="comments" rows="4" placeholder="Share any substitutions or tips you tried..."></textarea>
+                </div>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>
